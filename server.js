@@ -61,6 +61,6 @@ app.delete('/deleteface', image.deleteFaceEntry(db))
 // Deletes user from Re-Do
 app.delete('/deleteuser', profile.deleteUser(db))
 
-app.listen(3000, () => {
-    console.log('App is running on Port 3000');
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`App is running on Port ${process.env.PORT}`);
 });
