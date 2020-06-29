@@ -13,7 +13,6 @@ const { Model } = Objection;
 
 const db = Knex({
     client: 'pg',
-    useNullAsDefault: true,
     connection: {
         connectionString: process.env.DATABASE_URL,
         ssl: true,
