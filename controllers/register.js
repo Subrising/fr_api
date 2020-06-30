@@ -31,6 +31,7 @@ const newUser = (db, bcrypt) => (req, res) => {
                 .into('login')
                 .returning('email')
                 .then(loginEmail => {
+                    console.log("LoginEmail = ", loginEmail)
                     return trx.insert({
                         email: loginEmail[0],
                         name: name,
@@ -46,7 +47,10 @@ const newUser = (db, bcrypt) => (req, res) => {
                 .then(trx.commit)
                 .catch(trx.rollback)
         })
-            .catch(err => res.status(400).json("Failed to register. User/Email may already exist."))
+            .catch(err =>  {
+                console.log("Error = ", err)
+                res.status(400).json("Failed to register. User/Email may already exist.")
+            })
     })
 }
 
