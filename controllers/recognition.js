@@ -22,6 +22,8 @@ const checkAndSetData = (db) => (req, res) => {
                 .where('name', req.body.descriptors.name)
                 .andWhere('name', req.body.descriptors.name)
                 .catch(err => res.status(400).json("Failed to add facial recognition descriptors."))
+
+                console.log("CheckAndSetData returning to front end ,", results)
                 res.json(results)
             } else {
                 console.log("Adding to database ", req.body.descriptors.name)
@@ -59,6 +61,7 @@ const retrieveAllUserDescriptors = (db) => (req, res) => {
         .then(results => {
             console.log('2nd results = ', results)
             if (results.length) {
+                console.log("RetrieveAllUserDescriptors returning to front end with ", results)
                 res.json(results)
             } else {
                 throw new Error
