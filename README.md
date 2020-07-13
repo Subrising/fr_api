@@ -62,3 +62,8 @@ $ npm build
  - Add in React-Router for routing instead of using my own routing system
  - Fix some potential Async-Await issues that are occurring on older specced/slower computers
  - Fix some styling issues that are occurring between computers and Firefox/Chrome
+   
+ ### Acknowledgements
+ Created by David Gray  
+ Portfolio: https://dzg.life/  
+ LinkedIn: https://www.linkedin.com/in/david-gray-b60905102/
