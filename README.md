@@ -23,11 +23,11 @@ Re-Do is a facial recognition, redaction and replacement web application that is
 Re-Do makes use of a number of different frameworks/packages for full functionality:
 
 * [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces!
-* [Node.js] - Evented I/O for the back-end of Re-Do
+* [Node.js](https://nodejs.org/en/) - Evented I/O for the back-end of Re-Do
 * [Tachyons](https://tachyons.io/) - CSS Styling toolkit used for designing the front-end interface
 * [Face-API.js](https://github.com/justadudewhohacks/face-api.js/) - Facial Recognition feature based on Tensorflow.js AAllows for the detection of facial landmarks which are then used to create Facial Recognition matchers for each face for comparisons and recognition
 * [JIMP](https://www.npmjs.com/package/jimp) - JIMP is used in the Facial Replacement/Redaction feature to edit uploaded images to blur recognised faces or to blitz the uploaded replacement image of the recognised faces
-* [Express] - Express is used for the middleware/routing between the front-end and the back-end
+* [Express](http://expressjs.com/) - Express is used for the middleware/routing between the front-end and the back-end
 * [Canvas](https://www.npmjs.com/package/canvas) - Canvas is used to draw the images to the HTML page along with displaying the recognition results as an overlay on top of the image for the Facial Recognition feature
 * [bcrypt](https://www.npmjs.com/package/bcrypt) - Used for hashing passwords for each registered user in Re-Do
 * [Nodemon](https://nodemon.io/) - Used to test the back-end server during development
@@ -45,7 +45,6 @@ Re-Do requires [Node.js](https://nodejs.org/) to run when installing on a person
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd dillinger
 $ npm install -d
 $ node app
 ```
@@ -53,32 +52,7 @@ $ node app
 For production environments...
 
 ```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
-
-### Development
-
-Want to contribute? Great!
-
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantaneously see your updates!
-
-Open your favorite Terminal and run these commands.
-
-First Tab:
-```sh
-$ node app
-```
-
-Second Tab:
-```sh
-$ gulp watch
-```
-
-(optional) Third:
-```sh
-$ karma test
+$ npm build
 ```
 
 ### Todos
