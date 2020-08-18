@@ -11,11 +11,19 @@ import recognition from './controllers/recognition.js'
 
 const { Model } = Objection;
 
+// const db = Knex({
+//     client: 'pg',
+//     connection: {
+//         connectionString: process.env.DATABASE_URL,
+//         ssl: false,
+//     }
+// });
+
 const db = Knex({
     client: 'pg',
     connection: {
-        connectionString: process.env.DATABASE_URL,
-        ssl: false,
+        connectionString : process.env.POSTGRES_URI,
+        ssl : false,
     }
 });
 

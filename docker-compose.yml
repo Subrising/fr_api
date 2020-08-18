@@ -1,11 +1,29 @@
 version:  '3.8'
 
 services: 
+    # API
     fr-api:
         container_name: backend
         # image: node:12.18.3
         build: ./
         command: npm start
         working_dir: /usr/src/fr-api
+        environment: 
+            POSTGRES_URI: postgres://david:dg1234@postgres:5432/fr-api-docker
+        links:
+            - postgres
         ports: 
             - "3000:3000"
+        volumes: 
+            - ./:/usr/src/fr-api
+
+    # PostgreSQL
+    postgres:
+        environment: 
+            POSTGRES_USER: david
+            POSTGRES_PASSWORD: dg1234
+            POSTGRES_DB: fp-api-docker
+            POSTGRES_HOST: postgres
+        image: postgres
+        ports:
+            - "5432:5432"
