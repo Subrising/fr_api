@@ -1,0 +1,11 @@
+version:  '3.8'
+
+services: 
+    fr-api:
+        container_name: backend
+        # image: node:12.18.3
+        build: ./
+        command: npm start
+        working_dir: /usr/src/fr-api
+        ports: 
+            - "3000:3000"
